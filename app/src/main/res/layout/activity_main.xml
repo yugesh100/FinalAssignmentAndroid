@@ -26,10 +26,18 @@
         android:src="@drawable/ic_add" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/chatbutton"
         android:layout_gravity="bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ChatNow" />
+
+    <Button
+        android:id="@+id/quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginLeft="@+id/quiz"
+        android:text="quiz" />
 
 </FrameLayout>
