@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
     // Member variables for the adapter and RecyclerView
     private RecyclerView mRecyclerView;
     private TaskAdapter mAdapter;
-    private Button sendmail;
+    public Button sendmails;
 
     MainActivityViewModel viewModel;
 
@@ -37,13 +37,11 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sendmail = (Button) findViewById(R.id.sendmail);
-        sendmail.setOnClickListener(new View.OnClickListener() {
+        sendmails = (Button) findViewById(R.id.sendmail);
+        sendmails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 opensendmailActivity();
-
-
             }
         });
 
@@ -111,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
         });
     }
 public void opensendmailActivity(){
-       Intent intent =new Intent(this, sendmailActivity.class);
+       Intent intent =new Intent(MainActivity.this, sendmailActivity.class);
        startActivity(intent);
 }
     @Override

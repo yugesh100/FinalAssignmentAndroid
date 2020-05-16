@@ -10,10 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".sendmailActivity"></activity>
+        <activity android:name=".addedittask.AddEditTaskActivity"
+            android:label="Add a new Task"></activity>
+        <activity android:name=".tasks.MainActivity"></activity>
         <activity
-            android:name=".addedittask.AddEditTaskActivity"
-            android:label="Add a new Task" />
-        <activity android:name=".tasks.MainActivity">
+            android:name=".tasks.RegisterActivity"/>
+        <activity android:name=".tasks.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
