@@ -1,8 +1,10 @@
-package com.example.finalassignment;
+package com.example.finalassignment.tasks;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.finalassignment.R;
 
 public class HomeActivity extends AppCompatActivity {
 

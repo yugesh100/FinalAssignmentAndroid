@@ -1,4 +1,4 @@
-package com.example.finalassignment;
+package com.example.finalassignment.tasks;
 
 import android.content.ContentValues;
 import android.content.Context;

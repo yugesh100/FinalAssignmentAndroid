@@ -1,4 +1,4 @@
-package com.example.finalassignment;
+package com.example.finalassignment.tasks;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.finalassignment.R;
 
 public class RegisterActivity extends AppCompatActivity {
     DatabaseHelper db;

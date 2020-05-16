@@ -1,20 +1,17 @@
-package com.example.finalassignment;
+package com.example.finalassignment.tasks;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.finalassignment.tasks.MainActivity;
+import com.example.finalassignment.R;
 
 public class LoginActivity extends AppCompatActivity {
     EditText mTextUsername;

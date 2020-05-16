@@ -3,6 +3,7 @@ package com.example.finalassignment.tasks;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.finalassignment.R;
 import com.example.finalassignment.addedittask.AddEditTaskActivity;
 import com.example.finalassignment.database.TaskEntry;
+import com.example.finalassignment.sendmailActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
     // Member variables for the adapter and RecyclerView
     private RecyclerView mRecyclerView;
     private TaskAdapter mAdapter;
-
+    private Button sendmail;
 
     MainActivityViewModel viewModel;
 
@@ -35,6 +37,17 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sendmail = (Button) findViewById(R.id.sendmail);
+        sendmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                opensendmailActivity();
+
+
+            }
+        });
+
+
 
         viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
 
@@ -97,7 +110,10 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
             }
         });
     }
-
+public void opensendmailActivity(){
+       Intent intent =new Intent(this, sendmailActivity.class);
+       startActivity(intent);
+}
     @Override
     public void onItemClickListener(int itemId) {
         // Launch AddTaskActivity adding the itemId as an extra in the intent
