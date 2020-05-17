@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.finalassignment" >
+    package="com.example.finalassignment">
 
     <application
         android:allowBackup="true"
@@ -8,14 +8,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".ScoreViewModelActivity"></activity>
+        <activity android:name=".Court_counterActivity" />
+        <activity android:name=".StartQuizActivity" />
         <activity android:name=".sendmailActivity" />
+        <activity android:name=".ScoreActivity" />
+        <activity
+            android:name=".QuizActivity"
+            android:parentActivityName=".StartQuizActivity" />
         <activity
             android:name=".addedittask.AddEditTaskActivity"
             android:label="Add a new Task" />
         <activity android:name=".tasks.MainActivity" />
         <activity android:name=".tasks.RegisterActivity" />
-        <activity android:name=".tasks.LoginActivity" >
+        <activity android:name=".tasks.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

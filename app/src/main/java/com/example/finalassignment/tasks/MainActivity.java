@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finalassignment.R;
+import com.example.finalassignment.StartQuizActivity;
 import com.example.finalassignment.addedittask.AddEditTaskActivity;
 import com.example.finalassignment.database.TaskEntry;
 import com.example.finalassignment.sendmailActivity;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
     private RecyclerView mRecyclerView;
     private TaskAdapter mAdapter;
     public Button sendmails;
+    public Button Quiz_buttons;
 
     MainActivityViewModel viewModel;
 
@@ -38,13 +40,19 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sendmails = (Button) findViewById(R.id.sendmail);
+        Quiz_buttons =(Button) findViewById(R.id.Quiz_button);
         sendmails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 opensendmailActivity();
             }
         });
-
+        Quiz_buttons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openquiz_game();
+            }
+        });
 
 
         viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
@@ -111,6 +119,10 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
 public void opensendmailActivity(){
        Intent intent =new Intent(MainActivity.this, sendmailActivity.class);
        startActivity(intent);
+}
+public void openquiz_game(){
+        Intent yugeshquiz=new Intent(MainActivity.this, StartQuizActivity.class);
+        startActivity(yugeshquiz);
 }
     @Override
     public void onItemClickListener(int itemId) {

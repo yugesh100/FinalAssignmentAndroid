@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img_background"
+    tools:context=".StartQuizActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <Button
+        android:id="@+id/Button_Court_counter"
+        android:layout_width="381dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="20dp"
+        android:background="#F44336"
+        android:text="Court_counter"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="385dp"
+        android:layout_height="51dp"
+
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:text="Start Quiz" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

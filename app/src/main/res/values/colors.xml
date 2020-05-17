@@ -10,8 +10,9 @@
     <color name="green">#00F24F</color>
     <color name="yellow">#EFF200</color>
     <color name="red">#F31405 </color>
+    <color name="color_white">#ffffff</color>
 
-
+    <color name="black">#000000</color>
 
     //the three lines to be added are below
 

@@ -7,9 +7,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <!-- RecyclerView that is responsible for holding a listtaskEntrytask data -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewTasks"
+        android:background="@drawable/ic_launcher_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
@@ -30,7 +32,7 @@
         android:layout_gravity="bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quiz_game" />
+        android:text="Play_game" />
 
     <Button
         android:id="@+id/sendmail"

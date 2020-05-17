@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">To-Do List</string>
+    <string name="app_name">Final Assignment</string>
 
     <string name="main_activity_name">All Tasks</string>
     <string name="add_task_activity_name">Add a New Task</string>
@@ -8,7 +8,7 @@
     <string name="priority_1">1</string>
     <string name="priority_2">2</string>
     <string name="priority_3">3</string>
-
+    <string name="team_a">Team A</string>
     <!-- Strings for AddTaskActivity -->
     <!-- This etaskEntrytask has a unicode character for "..." = "&#8230;" -->
     <string name="edit_task_description">Describe your taskEntry&#8230;</string>
