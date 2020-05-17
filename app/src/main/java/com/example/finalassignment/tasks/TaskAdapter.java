@@ -96,13 +96,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
 
         switch (priority) {
             case 1:
-                priorityColor = ContextCompat.getColor(mContext, R.color.materialRed);
+                priorityColor = ContextCompat.getColor(mContext, R.color.green);
                 break;
             case 2:
-                priorityColor = ContextCompat.getColor(mContext, R.color.materialOrange);
+                priorityColor = ContextCompat.getColor(mContext, R.color.yellow);
                 break;
             case 3:
-                priorityColor = ContextCompat.getColor(mContext, R.color.materialYellow);
+                priorityColor = ContextCompat.getColor(mContext, R.color.red);
                 break;
             default:
                 break;

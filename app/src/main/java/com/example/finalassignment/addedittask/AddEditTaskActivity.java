@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.finalassignment.R;
 import com.example.finalassignment.database.TaskEntry;
+import com.example.finalassignment.tasks.LoginActivity;
 
 import java.util.Date;
 
@@ -34,7 +35,7 @@ public class AddEditTaskActivity extends AppCompatActivity {
     EditText mEditText;
     RadioGroup mRadioGroup;
     Button mButton;
-
+    Button mButtonLogout;
     private int mTaskId = DEFAULT_TASK_ID;
 
 
@@ -43,9 +44,14 @@ public class AddEditTaskActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit_task);
+        mButtonLogout = (Button)findViewById(R.id.log_button);
 
-
-
+        mButtonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Logoutsystem();
+            }
+        });
         initViews();
 
         if (savedInstanceState != null && savedInstanceState.containsKey(INSTANCE_TASK_ID)) {
@@ -171,5 +177,11 @@ public class AddEditTaskActivity extends AppCompatActivity {
             case PRIORITY_LOW:
                 ((RadioGroup) findViewById(R.id.radioGroup)).check(R.id.radButton3);
         }
+    }
+    public void Logoutsystem()
+
+    {
+        Intent LogoutIntent= new Intent(AddEditTaskActivity.this, LoginActivity.class);
+        startActivity(LogoutIntent);
     }
 }

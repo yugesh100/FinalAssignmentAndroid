@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-   <!-- This vertical linear layout contains all the views in the AddTaskActivity code.
-    This includes an EditText to adtaskEntrytask description, and buttons to select a priority
-    -->
+<!-- This vertical linear layout contains all the views in the AddTaskActivity code.
+ This includes an EditText to adtaskEntrytask description, and buttons to select a priority
+ -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="start"
-        android:hint="@string/edit_task_description"
+        android:hint="@string/enter_your_mail"
         android:paddingBottom="@dimen/activity_horizontal_margin" />
 
     <!-- TextView and FrameLayout (which contains buttons) for Priority Selection -->
@@ -30,7 +30,7 @@
         android:layout_gravity="start"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/priority_string"
+        android:text="@string/position"
         android:textColor="@android:color/primary_text_light" />
 
     <!-- RadioGroup for visible selection of a priority -->
@@ -48,9 +48,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/materialRed"
+            android:background="@color/green"
             android:checked="true"
-            android:text="@string/high_priority"
+            android:text="@string/first"
             android:theme="@style/WhiteRadioButton" />
 
         <RadioButton
@@ -58,8 +58,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/materialOrange"
-            android:text="@string/med_priority"
+            android:background="@color/yellow"
+            android:text="@string/second"
             android:theme="@style/WhiteRadioButton" />
 
         <RadioButton
@@ -67,8 +67,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/materialYellow"
-            android:text="@string/low_priority"
+            android:background="@color/red"
+            android:text="@string/third"
             android:theme="@style/WhiteRadioButton" />
 
     </RadioGroup>
@@ -83,5 +83,14 @@
         android:background="@color/colorPrimary"
         android:text="@string/add_button"
         android:textColor="@android:color/primary_text_dark" />
+
+    <Button
+        android:id="@+id/log_button"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:background="@color/color_preloader_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Logout" />
 
 </LinearLayout>
