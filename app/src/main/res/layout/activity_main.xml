@@ -9,15 +9,17 @@
 
 
     <!-- RecyclerView that is responsible for holding a listtaskEntrytask data -->
+
+    <!-- Floating action button that launches AddTaskActivity when clicked -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewTasks"
-        android:background="@drawable/ic_launcher_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/ic_launcher_background"
         android:clipToPadding="false"
         android:paddingBottom="80dp" />
 
-    <!-- Floating action button that launches AddTaskActivity when clicked -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -29,16 +31,20 @@
 
     <Button
         android:id="@+id/Quiz_button"
+        android:layout_width="108dp"
+        android:layout_height="89dp"
         android:layout_gravity="bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="@drawable/priority_circle"
+        android:drawableTop="@drawable/ic_all_inclusive_black_24dp"
         android:text="Play_game" />
 
     <Button
         android:id="@+id/sendmail"
+        android:layout_width="95dp"
+        android:layout_height="84dp"
         android:layout_gravity="bottom|center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round"
+        android:drawableTop="@drawable/mailnow"
         android:text="sendmail" />
 
 </FrameLayout>
