@@ -16,7 +16,7 @@
         android:id="@+id/recyclerViewTasks"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/ic_launcher_background"
+        android:background="@drawable/finalassignment"
         android:clipToPadding="false"
         android:paddingBottom="80dp" />
 
@@ -36,7 +36,7 @@
         android:layout_gravity="bottom"
         android:background="@drawable/priority_circle"
         android:drawableTop="@drawable/ic_all_inclusive_black_24dp"
-        android:text="Play_game" />
+        android:text="quiz and court" />
 
     <Button
         android:id="@+id/sendmail"

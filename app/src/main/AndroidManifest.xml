@@ -21,8 +21,8 @@
             android:name=".addedittask.AddEditTaskActivity"
             android:label="Add a new Task" />
         <activity android:name=".tasks.MainActivity" />
-        <activity android:name=".tasks.RegisterActivity" />
-        <activity android:name=".tasks.LoginActivity">
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,5 +30,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

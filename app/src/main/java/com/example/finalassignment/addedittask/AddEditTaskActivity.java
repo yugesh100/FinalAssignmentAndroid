@@ -11,9 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.finalassignment.LoginActivity;
 import com.example.finalassignment.R;
 import com.example.finalassignment.database.TaskEntry;
-import com.example.finalassignment.tasks.LoginActivity;
 
 import java.util.Date;
 
@@ -38,14 +38,12 @@ public class AddEditTaskActivity extends AppCompatActivity {
     Button mButtonLogout;
     private int mTaskId = DEFAULT_TASK_ID;
 
-
     AddEditTaskViewModel viewModel;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit_task);
         mButtonLogout = (Button)findViewById(R.id.log_button);
-
         mButtonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
