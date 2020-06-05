@@ -94,7 +94,7 @@ public class SignUpActivity extends AppCompatActivity {
                 TextUtils.isEmpty(edtPassword.getText().toString()) ||
                 TextUtils.isEmpty(edtName.getText().toString()) ||
                 TextUtils.isEmpty(edtLastName.getText().toString())
-                ) {
+        ) {
             return true;
         } else {
             return false;
