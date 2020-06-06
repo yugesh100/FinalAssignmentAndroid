@@ -11,7 +11,7 @@ public class Relations {
 
     @Relation(
             parentColumn = "id",
-            entityColumn = "id"
+            entityColumn = "userCreatorId"
     )
    public TaskEntry taskentry;
 }

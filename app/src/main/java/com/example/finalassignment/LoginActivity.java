@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import com.example.finalassignment.Models.User;
+import com.example.finalassignment.database.AppDatabase;
 import com.example.finalassignment.database.UserDao;
 import com.example.finalassignment.database.UserDatabase;
 import com.example.finalassignment.tasks.MainActivity;
@@ -24,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btSignUp;
     private EditText edtEmail;
     private EditText edtPassword;
-    private UserDatabase database;
+    private AppDatabase database;
 
     private UserDao userDao;
     private ProgressDialog progressDialog;
@@ -41,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setProgress(0);
 
 
-        database = Room.databaseBuilder(this, UserDatabase.class, "mi-database.db")
+        database = Room.databaseBuilder(this, AppDatabase.class, "mi-database.db")
                 .allowMainThreadQueries()
                 .build();
 
