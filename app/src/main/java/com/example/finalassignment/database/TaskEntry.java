@@ -1,8 +1,7 @@
-package com.example.finalassignment.database;
+package com.example.todomvvm.database;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
@@ -13,30 +12,23 @@ public class TaskEntry {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
-    private int userCreatorId;
     private String description;
     private int priority;
     @ColumnInfo(name="updated_at")
     private Date updatedAt;
-
-
 
     @Ignore
     public TaskEntry(String description, int priority, Date updatedAt) {
         this.description = description;
         this.priority = priority;
         this.updatedAt = updatedAt;
-
     }
 
-    public TaskEntry(int id,int userCreatorId,String description, int priority, Date updatedAt) {
+    public TaskEntry(int id, String description, int priority, Date updatedAt) {
         this.id = id;
-        this.userCreatorId = userCreatorId;
         this.description = description;
         this.priority = priority;
         this.updatedAt = updatedAt;
-
-
     }
 
     public int getId() {
@@ -45,14 +37,6 @@ public class TaskEntry {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getUserCreatorId() {
-        return userCreatorId;
-    }
-
-    public void setUserCreatorId(int userCreatorId) {
-        this.userCreatorId = userCreatorId;
     }
 
     public String getDescription() {
@@ -78,5 +62,4 @@ public class TaskEntry {
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-
 }

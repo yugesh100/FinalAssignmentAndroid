@@ -16,7 +16,7 @@ public class User implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     @NonNull
-    public int id;
+    private int id;
     private String name;
     private String lastName;
 

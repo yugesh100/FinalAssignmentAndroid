@@ -7,7 +7,7 @@ import java.util.List;
 public class Repository {
 
     TaskDao dao;
-
+    UserDao relationdao;
     public Repository(AppDatabase appDatabase){
         dao = appDatabase.taskDao();
     }

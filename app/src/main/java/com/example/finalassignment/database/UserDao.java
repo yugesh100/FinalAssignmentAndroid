@@ -19,8 +19,8 @@ public interface UserDao {
     User getUser(String mail, String password);
 
     @Transaction
-    @Query("SELECT * FROM User")
-    public List<Relations> getRelations();
+    @Query("SELECT * FROM User where id=:id")
+    public List<Relations> getRelations(int id);
 
     @Insert
     void insert(User user);

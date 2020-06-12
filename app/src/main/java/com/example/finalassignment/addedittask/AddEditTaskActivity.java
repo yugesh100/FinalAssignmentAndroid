@@ -1,4 +1,8 @@
-package com.example.finalassignment.addedittask;
+package com.example.todomvvm.addedittask;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,13 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
-import com.example.finalassignment.LoginActivity;
 import com.example.finalassignment.R;
-import com.example.finalassignment.database.TaskEntry;
+import com.example.finalassignment.addedittask.AddEditTaskViewModel;
+import com.example.finalassignment.addedittask.AddEditTaskViewModelFactory;
+import com.example.finalassignment.database.AppDatabase;
+import com.example.finalassignment.database.Repository;
+import com.example.todomvvm.database.TaskEntry;
 
 import java.util.Date;
 
@@ -35,21 +38,18 @@ public class AddEditTaskActivity extends AppCompatActivity {
     EditText mEditText;
     RadioGroup mRadioGroup;
     Button mButton;
-    Button mButtonLogout;
+
     private int mTaskId = DEFAULT_TASK_ID;
+
 
     AddEditTaskViewModel viewModel;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit_task);
-        mButtonLogout = (Button)findViewById(R.id.log_button);
-        mButtonLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Logoutsystem();
-            }
-        });
+
+
+
         initViews();
 
         if (savedInstanceState != null && savedInstanceState.containsKey(INSTANCE_TASK_ID)) {
@@ -175,11 +175,5 @@ public class AddEditTaskActivity extends AppCompatActivity {
             case PRIORITY_LOW:
                 ((RadioGroup) findViewById(R.id.radioGroup)).check(R.id.radButton3);
         }
-    }
-    public void Logoutsystem()
-
-    {
-        Intent LogoutIntent= new Intent(AddEditTaskActivity.this, LoginActivity.class);
-        startActivity(LogoutIntent);
     }
 }

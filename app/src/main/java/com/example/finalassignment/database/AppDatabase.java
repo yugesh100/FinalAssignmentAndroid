@@ -13,7 +13,7 @@ import com.example.finalassignment.Models.User;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {User.class,TaskEntry.class}, version = 1, exportSchema = false)
+@Database(entities = {TaskEntry.class}, version = 1, exportSchema = false)
 @TypeConverters(DateConverter.class)
 public abstract class AppDatabase extends RoomDatabase {
 
@@ -38,7 +38,6 @@ public abstract class AppDatabase extends RoomDatabase {
         Log.d(LOG_TAG, "Getting the database instance");
         return sInstance;
     }
-    public abstract UserDao getUserDao();
     public abstract TaskDao taskDao();
 
 

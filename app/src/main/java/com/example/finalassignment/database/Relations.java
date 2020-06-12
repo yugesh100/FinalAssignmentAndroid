@@ -5,13 +5,15 @@ import androidx.room.Relation;
 
 import com.example.finalassignment.Models.User;
 
+import java.util.List;
+
 public class Relations {
     @Embedded
     public User user;
 
     @Relation(
             parentColumn = "id",
-            entityColumn = "userCreatorId"
+            entityColumn = "id"
     )
-   public TaskEntry taskentry;
+   public List<TaskEntry> taskentry;
 }
