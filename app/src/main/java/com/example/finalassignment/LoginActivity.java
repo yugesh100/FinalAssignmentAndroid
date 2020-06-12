@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btSignUp;
     private EditText edtEmail;
     private EditText edtPassword;
-    private AppDatabase database;
+    private UserDatabase database;
 
     private UserDao userDao;
     private ProgressDialog progressDialog;
@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setProgress(0);
 
 
-        database = Room.databaseBuilder(this, AppDatabase.class, "mi-database.db")
+        database = Room.databaseBuilder(this, UserDatabase.class, "mi-database.db")
                 .allowMainThreadQueries()
                 .build();
 

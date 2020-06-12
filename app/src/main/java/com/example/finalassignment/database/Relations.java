@@ -13,7 +13,8 @@ public class Relations {
 
     @Relation(
             parentColumn = "id",
-            entityColumn = "id"
+            entityColumn = "userCreateId",
+            entity = TaskEntry.class
     )
    public List<TaskEntry> taskentry;
 }

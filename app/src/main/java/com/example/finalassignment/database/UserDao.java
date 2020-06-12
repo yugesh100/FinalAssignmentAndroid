@@ -6,7 +6,6 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.Transaction;
 import androidx.room.Update;
 
 import com.example.finalassignment.Models.User;
@@ -18,11 +17,7 @@ public interface UserDao {
     @Query("SELECT * FROM User where email= :mail and password= :password")
     User getUser(String mail, String password);
 
-    @Transaction
-    @Query("SELECT * FROM User where id=:id")
-    public List<Relations> getRelations(int id);
-
-    @Insert
+       @Insert
     void insert(User user);
 
     @Update
