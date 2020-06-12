@@ -7,12 +7,11 @@ import java.util.List;
 public class Repository {
 
     TaskDao dao;
-
     public Repository(AppDatabase appDatabase){
         dao = appDatabase.taskDao();
     }
 
-    public LiveData<List<TaskEntry>> getTasks(){
+     public LiveData<List<TaskEntry>> getTasks(){
        return dao.loadAllTasks();
     }
 

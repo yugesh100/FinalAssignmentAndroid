@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import com.example.finalassignment.Models.User;
+import com.example.finalassignment.database.AppDatabase;
 import com.example.finalassignment.database.UserDao;
 import com.example.finalassignment.database.UserDatabase;
 import com.example.finalassignment.tasks.MainActivity;

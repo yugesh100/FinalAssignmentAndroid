@@ -9,7 +9,11 @@ import androidx.room.PrimaryKey;
 import java.io.Serializable;
 
 /**
+<<<<<<< HEAD
  * Created by Yugesh sapkota on 6/1/2020.
+=======
+ * Created by yugesh sapkota on 6/1/2020.
+>>>>>>> step.05-Exercise-Create-relation
  */
 @Entity
 public class User implements Serializable {

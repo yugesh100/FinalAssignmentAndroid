@@ -2,8 +2,11 @@ package com.example.finalassignment.database;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+
+import com.example.finalassignment.Models.User;
 
 import java.util.Date;
 
@@ -19,7 +22,6 @@ public class TaskEntry {
 
 
 
-
     @Ignore
     public TaskEntry(String description, int priority, Date updatedAt) {
         this.description = description;
@@ -28,11 +30,12 @@ public class TaskEntry {
 
     }
 
-    public TaskEntry(int id, String description, int priority, Date updatedAt) {
+    public TaskEntry(int id,String description, int priority, Date updatedAt) {
         this.id = id;
         this.description = description;
         this.priority = priority;
         this.updatedAt = updatedAt;
+
 
     }
 

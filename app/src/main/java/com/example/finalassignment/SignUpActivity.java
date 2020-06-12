@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import com.example.finalassignment.Models.User;
+import com.example.finalassignment.database.AppDatabase;
 import com.example.finalassignment.database.UserDao;
 import com.example.finalassignment.database.UserDatabase;
 
@@ -94,7 +95,7 @@ public class SignUpActivity extends AppCompatActivity {
                 TextUtils.isEmpty(edtPassword.getText().toString()) ||
                 TextUtils.isEmpty(edtName.getText().toString()) ||
                 TextUtils.isEmpty(edtLastName.getText().toString())
-                ) {
+        ) {
             return true;
         } else {
             return false;
