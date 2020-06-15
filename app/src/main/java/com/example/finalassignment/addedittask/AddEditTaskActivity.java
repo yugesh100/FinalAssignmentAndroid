@@ -128,7 +128,7 @@ public class AddEditTaskActivity extends AppCompatActivity {
         String description = mEditText.getText().toString();
         int priority = getPriorityFromViews();
         Date date = new Date();
-        TaskEntry todo = new TaskEntry(description, priority, date);
+        TaskEntry todo = new TaskEntry(description, priority);
         if(mTaskId == DEFAULT_TASK_ID)
             viewModel.insertTask(todo);
         else{

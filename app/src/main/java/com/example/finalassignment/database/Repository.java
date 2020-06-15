@@ -2,6 +2,8 @@ package com.example.finalassignment.database;
 
 import androidx.lifecycle.LiveData;
 
+import com.example.finalassignment.Models.User;
+
 import java.util.List;
 
 public class Repository {
@@ -14,7 +16,6 @@ public class Repository {
      public LiveData<List<TaskEntry>> getTasks(){
        return dao.loadAllTasks();
     }
-
     public LiveData<TaskEntry> getTaskById(int taskId){
         return dao.loadTAskById(taskId);
     }

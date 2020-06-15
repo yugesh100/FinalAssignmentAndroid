@@ -2,7 +2,7 @@ package com.example.finalassignment.database;
 
 import androidx.room.Embedded;
 import androidx.room.Relation;
-
+import com.example.finalassignment.database.TaskEntry;
 import com.example.finalassignment.Models.User;
 
 import java.util.List;
@@ -13,8 +13,9 @@ public class Relations {
 
     @Relation(
             parentColumn = "id",
-            entityColumn = "userCreateId",
-            entity = TaskEntry.class
+            entityColumn = "userCreatorId"
     )
-   public List<TaskEntry> taskentry;
+   public List<TaskEntry> entryList;
+
+
 }
