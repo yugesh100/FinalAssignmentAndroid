@@ -11,12 +11,11 @@
 ![Screenshot](image/6.png)
 
 ![Screenshot](image/7.png)
-![Screenshot](image/15.png)
-
 ![Screenshot](image/8.png)
-![Screenshot](image/9.png)
 
+![Screenshot](image/9.png)
 ![Screenshot](image/10.png)
+
 ![Screenshot](image/11.png)
 ![Screenshot](image/12.png)
 
