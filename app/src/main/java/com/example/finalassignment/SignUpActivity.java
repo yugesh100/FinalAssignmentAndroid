@@ -15,6 +15,7 @@ import androidx.room.Room;
 
 import com.example.finalassignment.Models.User;
 import com.example.finalassignment.database.AppDatabase;
+import com.example.finalassignment.database.AppDatabase_Impl;
 import com.example.finalassignment.database.UserDao;
 
 
@@ -52,7 +53,7 @@ public class SignUpActivity extends AppCompatActivity {
         btCancel = findViewById(R.id.btCancel);
         btRegister = findViewById(R.id.btRegister);
 
-        userDao = Room.databaseBuilder(this, AppDatabase.class, AppDatabase.DATABASE_NAME)
+        userDao = Room.databaseBuilder(this, AppDatabase.class, "database-name")
                 .allowMainThreadQueries()
                 .build()
                 .getUserDao();

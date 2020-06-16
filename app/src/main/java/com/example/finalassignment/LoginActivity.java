@@ -15,7 +15,9 @@ import androidx.room.Room;
 
 import com.example.finalassignment.Models.User;
 import com.example.finalassignment.database.AppDatabase;
+import com.example.finalassignment.database.AppDatabase_Impl;
 import com.example.finalassignment.database.UserDao;
+import com.example.finalassignment.database.UserDao_Impl;
 import com.example.finalassignment.tasks.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -40,8 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setProgress(0);
 
-
-        database = Room.databaseBuilder(this, AppDatabase.class, AppDatabase.DATABASE_NAME)
+        database = Room.databaseBuilder(this, AppDatabase.class, "database-name")
                 .allowMainThreadQueries()
                 .build();
 
