@@ -18,8 +18,7 @@ public class TaskEntry {
     public int userCreatorId;
     private String description;
     private int priority;
-   // @ColumnInfo(name="updated_at")
-    //private Date updatedAt;
+
 
 
 
@@ -27,7 +26,7 @@ public class TaskEntry {
     public TaskEntry(String description, int priority) {
         this.description = description;
         this.priority = priority;
-     //   this.updatedAt = updatedAt;
+
 
     }
 

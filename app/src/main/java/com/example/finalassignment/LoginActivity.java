@@ -15,9 +15,7 @@ import androidx.room.Room;
 
 import com.example.finalassignment.Models.User;
 import com.example.finalassignment.database.AppDatabase;
-import com.example.finalassignment.database.AppDatabase_Impl;
 import com.example.finalassignment.database.UserDao;
-import com.example.finalassignment.database.UserDao_Impl;
 import com.example.finalassignment.tasks.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -30,7 +28,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private UserDao userDao;
     private ProgressDialog progressDialog;
-    //private static String DATABASE_NAME = "todolist";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setProgress(0);
 
-        database = Room.databaseBuilder(this, AppDatabase.class, "database-name")
+        database = Room.databaseBuilder(this, AppDatabase.class,"todolist")
                 .allowMainThreadQueries()
                 .build();
 

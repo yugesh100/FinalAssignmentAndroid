@@ -14,7 +14,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Database(entities = {User.class,TaskEntry.class}, version = 1, exportSchema = false)
-//@TypeConverters(DataConverter.class)
 public abstract class AppDatabase extends RoomDatabase {
 
     public static final String DATABASE_NAME = "todolist";
