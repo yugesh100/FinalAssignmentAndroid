@@ -18,7 +18,11 @@ public interface UserDao {
     @Query("SELECT * FROM User where email= :mail and password= :password")
     User getUser(String mail, String password);
 
-       @Insert
+    @Transaction
+    @Query("SELECT * FROM User where id=:id")
+    public List<Relations> getRelations(int id);
+
+    @Insert
     void insert(User user);
 
     @Update
@@ -26,6 +30,7 @@ public interface UserDao {
 
     @Delete
     void delete(User user);
+
 
 
 }

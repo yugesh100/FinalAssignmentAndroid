@@ -16,7 +16,7 @@ import androidx.room.Room;
 import com.example.finalassignment.Models.User;
 import com.example.finalassignment.database.AppDatabase;
 import com.example.finalassignment.database.UserDao;
-import com.example.finalassignment.database.UserDatabase;
+
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -52,7 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
         btCancel = findViewById(R.id.btCancel);
         btRegister = findViewById(R.id.btRegister);
 
-        userDao = Room.databaseBuilder(this, UserDatabase.class, "mi-database.db")
+        userDao = Room.databaseBuilder(this, AppDatabase.class, "todolist")
                 .allowMainThreadQueries()
                 .build()
                 .getUserDao();

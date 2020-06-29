@@ -13,13 +13,14 @@ import com.example.finalassignment.Models.User;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {TaskEntry.class}, version = 1, exportSchema = false)
-@TypeConverters(DateConverter.class)
+@Database(entities = {User.class,TaskEntry.class}, version = 1, exportSchema = false)
+//@TypeConverters(DataConverter.class)
 public abstract class AppDatabase extends RoomDatabase {
 
+    public static final String DATABASE_NAME = "todolist";
     private static final String LOG_TAG = AppDatabase.class.getSimpleName();
     private static final Object LOCK = new Object();
-    private static String DATABASE_NAME = "todolist";
+
     static final ExecutorService databaseWriteExecutor =
             Executors.newFixedThreadPool(1);
 
@@ -38,6 +39,7 @@ public abstract class AppDatabase extends RoomDatabase {
         Log.d(LOG_TAG, "Getting the database instance");
         return sInstance;
     }
+    public abstract UserDao getUserDao();
     public abstract TaskDao taskDao();
 
 

@@ -15,26 +15,28 @@ public class TaskEntry {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
+    public int userCreatorId;
     private String description;
     private int priority;
-    @ColumnInfo(name="updated_at")
-    private Date updatedAt;
+   // @ColumnInfo(name="updated_at")
+    //private Date updatedAt;
 
 
 
     @Ignore
-    public TaskEntry(String description, int priority, Date updatedAt) {
+    public TaskEntry(String description, int priority) {
         this.description = description;
         this.priority = priority;
-        this.updatedAt = updatedAt;
+     //   this.updatedAt = updatedAt;
 
     }
 
-    public TaskEntry(int id,String description, int priority, Date updatedAt) {
+    public TaskEntry(int id,int userCreatorId,String description, int priority) {
         this.id = id;
+        this.userCreatorId = userCreatorId;
         this.description = description;
         this.priority = priority;
-        this.updatedAt = updatedAt;
+
 
 
     }
@@ -45,6 +47,14 @@ public class TaskEntry {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getUserCreatorId() {
+        return userCreatorId;
+    }
+
+    public void setUserCreatorId(int userCreatorId) {
+        this.userCreatorId = userCreatorId;
     }
 
     public String getDescription() {
@@ -63,12 +73,6 @@ public class TaskEntry {
         this.priority = priority;
     }
 
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
 
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 
 }
