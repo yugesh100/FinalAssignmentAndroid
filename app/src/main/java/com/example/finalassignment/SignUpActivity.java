@@ -52,7 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
         btCancel = findViewById(R.id.btCancel);
         btRegister = findViewById(R.id.btRegister);
 
-        userDao = Room.databaseBuilder(this, AppDatabase.class, AppDatabase.DATABASE_NAME)
+        userDao = Room.databaseBuilder(this, AppDatabase.class, "todolist")
                 .allowMainThreadQueries()
                 .build()
                 .getUserDao();

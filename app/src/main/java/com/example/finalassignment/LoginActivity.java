@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setProgress(0);
 
 
-        database = Room.databaseBuilder(this, AppDatabase.class, AppDatabase.DATABASE_NAME)
+        database = Room.databaseBuilder(this, AppDatabase.class, "todolist")
                 .allowMainThreadQueries()
                 .build();
 
